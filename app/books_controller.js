@@ -11,7 +11,13 @@ bookly.BooksController = function($scope) {
 
   // Add a selected book to cart
   $scope.addBookToCart = function(book) {
-    $scope.cart.push(book);
+
+    if ($scope.cart.indexOf(book) === -1) {
+      $scope.cart.push(book);
+    }
+    else {
+      alert("this version only supports one copy of a book in the cart.");
+    }
   };
 
   // set default sort to book title
