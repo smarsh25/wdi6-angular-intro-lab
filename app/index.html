@@ -4,6 +4,7 @@
   <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
   <script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 
   <link href="main.css" rel="stylesheet" type="text/css" />
   <script src ="data.js"></script>
@@ -53,7 +54,7 @@
               <td width='40%'>{{book.title}}</td><td width='40%'>{{book.author}}</td><td width='20%'>{{book.price | currency}}</td>
             </tr>
             <tr class="cart-total">
-              <td colspan=2 width='80%'>Total</td><td width='20%'>[[total]]</td>
+              <td colspan=2 width='80%'>Total</td><td width='20%'>{{cartTotal()}}</td>
             </tr>
           </table>
           <div class="btn-group cart-button">

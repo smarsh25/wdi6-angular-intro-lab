@@ -20,7 +20,7 @@ bookly.BooksController = function($scope) {
   };
 
   // empty the cart
-  $scope.emptyCart = function (cart) {
+  $scope.emptyCart = function(cart) {
     while ($scope.cart.length > 0) {
       $scope.cart.pop();
     }
@@ -28,4 +28,10 @@ bookly.BooksController = function($scope) {
 
   // set default sort to book title
   $scope.bookSort = 'title';
+
+  $scope.cartTotal = function() {
+    var sum = 0;
+    _.each($scope.cart, function(book) { sum += book.price; });
+    return sum;
+  };
 };
