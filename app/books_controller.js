@@ -19,16 +19,13 @@ bookly.BooksController = function($scope) {
     }
   };
   $scope.emptyCart = function() {
-    var book, _i, _len, _ref, _results;
+    var book, _i, _len, _ref;
     _ref = $scope.cart;
-    _results = [];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       book = _ref[_i];
-      _results.push($scope.cart.pop);
+      $scope.cart.pop;
     }
-    return _results;
   };
-  return;
   $scope.bookSort = 'title';
   $scope.cartTotal = function() {
     var book, sum, _i, _len, _ref;

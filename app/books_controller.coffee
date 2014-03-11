@@ -16,7 +16,7 @@ bookly.BooksController = ($scope) ->
     return
 
   $scope.emptyCart = ->
-     for book in $scope.cart 
+    for book in $scope.cart 
       $scope.cart.pop
     return
 
