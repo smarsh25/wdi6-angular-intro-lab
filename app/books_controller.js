@@ -23,7 +23,7 @@ bookly.BooksController = function($scope) {
     _ref = $scope.cart;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       book = _ref[_i];
-      $scope.cart.pop;
+      $scope.cart.pop();
     }
   };
   $scope.bookSort = 'title';
