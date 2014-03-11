@@ -11,11 +11,15 @@ bookly.BooksController = function($scope) {
 
   // Add a selected book to cart
   $scope.addBookToCart = function(book) {
-    if ($scope.cart.indexOf(book) === -1) {
+    var bookIndex = $scope.cart.indexOf(book);
+
+    // if book not in cart yet, add it, else increase quantity
+    if (bookIndex === -1) {
+      book.quantity = 1;
       $scope.cart.push(book);
     }
     else {
-      alert("this version only supports one copy of a book in the cart.");
+      $scope.cart[bookIndex].quantity++;
     }
   };
 
@@ -31,7 +35,7 @@ bookly.BooksController = function($scope) {
 
   $scope.cartTotal = function() {
     var sum = 0;
-    _.each($scope.cart, function(book) { sum += book.price; });
+    _.each($scope.cart, function(book) { sum += (book.price*book.quantity); });
     return sum;
   };
 };
