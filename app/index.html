@@ -48,13 +48,19 @@
           </ng-pluralize></h3>
           <table class="carttable">
             <tr>
-              <th width='40%'>Title</th><th width='40%'>Author</th><th width='20%'>Price</th>
+              <th width='35%'>Title</th>
+              <th width='35%'>Author</th>
+              <th width='10%'>Qty</th>
+              <th width='20%'>Price</th>
             </tr>
             <tr ng-repeat="book in cart">
-              <td width='40%'>{{book.title}}</td><td width='40%'>{{book.author}}</td><td width='20%'>{{book.price | currency}}</td>
+              <td width='35%'>{{book.title}}</td>
+              <td width='35%'>{{book.author}}</td>
+              <td widht='10%'>{{book.quantity}}</td>
+              <td width='20%'>{{book.price | currency}}</td>
             </tr>
             <tr class="cart-total">
-              <td colspan=2 width='80%'>Total</td><td width='20%'>{{cartTotal()}}</td>
+              <td colspan=3 width='80%'>Total</td><td width='20%'>{{cartTotal()}}</td>
             </tr>
           </table>
           <div class="btn-group cart-button">
