@@ -19,6 +19,13 @@ bookly.BooksController = function($scope) {
     }
   };
 
+  // empty the cart
+  $scope.emptyCart = function (cart) {
+    while ($scope.cart.length > 0) {
+      $scope.cart.pop();
+    }
+  };
+
   // set default sort to book title
   $scope.bookSort = 'title';
 };
