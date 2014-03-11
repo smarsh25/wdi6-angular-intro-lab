@@ -7,5 +7,13 @@ bookly.BooksController = function($scope) {
   $scope.books = books;
 
   //Code to manage cart goes here
+  $scope.cart = [];
 
+  // Add a selected book to cart
+  $scope.addBookToCart = function(book) {
+    $scope.cart.push(book);
+  };
+
+  // set default sort to book title
+  $scope.bookSort = 'title';
 };
