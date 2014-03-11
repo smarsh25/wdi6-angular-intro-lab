@@ -11,7 +11,6 @@ bookly.BooksController = function($scope) {
 
   // Add a selected book to cart
   $scope.addBookToCart = function(book) {
-
     if ($scope.cart.indexOf(book) === -1) {
       $scope.cart.push(book);
     }
